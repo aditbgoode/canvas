@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<style type="text/css">
+		.img-responsive{
+			width: 100%;
+		}
+		.back{
+			z-index:-100;
+			position: absolute;
+		}
+		.front{
+			z-index:100;
+			position:relative;
+		}
+	</style>
+	<div class="back">
+		<img src="3306.png">
+	</div>
+	<div class="front">
+		<canvas id="myCanvas" width="578" height="200"></canvas>
+	</div>
+	<script>
+		var canvas = document.getElementById('myCanvas');
+		var context = canvas.getContext('2d');
+
+		// begin custom shape
+		context.beginPath();
+		context.lineTo(101,9);
+		context.lineTo(100,19);
+		context.lineTo(94,28);
+		context.lineTo(86,36);
+		context.lineTo(76,39);
+		context.lineTo(66,43);
+		context.lineTo(57,48);
+		context.lineTo(53,58);
+		context.lineTo(55,68);
+		context.lineTo(60,77);
+		context.lineTo(69,83);
+		context.lineTo(80,83);
+		context.lineTo(90,81);
+		context.lineTo(102,82);
+		context.lineTo(111,87);
+		context.lineTo(121,89);
+		context.lineTo(130,82);
+		context.lineTo(140,77);
+		context.lineTo(149,72);
+		context.lineTo(159,71);
+		context.lineTo(169,69);
+		context.lineTo(175,60);
+		context.lineTo(180,50);
+		context.lineTo(181,40);
+		context.lineTo(184,30);
+		context.lineTo(184,19);
+		context.lineTo(177,11);
+		context.lineTo(167,7);
+		context.lineTo(157,6);
+		context.lineTo(102,6);
+
+		// complete custom shape
+		context.closePath();
+		context.lineWidth = 5;
+		context.strokeStyle = 'red';
+		context.stroke();
+	</script>
+</body>
+</html>
